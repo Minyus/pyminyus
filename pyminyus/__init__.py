@@ -1,3 +1,1 @@
-# -*- coding: utf-8 -*-
-
-__author__ = "Yusuke Minami"
+__version__='0.0.4'

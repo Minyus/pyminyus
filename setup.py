@@ -1,21 +1,34 @@
-from setuptools import find_packages, setup
+from setuptools import setup
+from codecs import open
+from os import path
+import re
 
-setup(name='pyminyus',
-      version='0.0.2',
-      author='Yusuke Minami',
-	  author_email='contactme@minyus.github.com',
-	  license='MIT',
-	  description='Python utility.',
-	  url='https://github.com/Minyus/pyminyus',
-      packages=find_packages(),
-	  install_requires=[
-      ],
-	  keywords='minyus',
-	  zip_safe=False,
-      classifiers=[
-        'Development Status :: 2 - Pre-Alpha',
+package_name = 'pyminyus'
+
+# Read version from __init__.py file
+root_dir = path.abspath(path.dirname(__file__))
+with open(path.join(root_dir, package_name, '__init__.py')) as f:
+    init_text = f.read()
+    version = re.search(r'__version__\s*=\s*[\'\"](.+?)[\'\"]', init_text).group(1)
+
+setup(
+    name=package_name,
+    packages=[package_name],
+    version=version,
+    license='MIT',
+    author='Yusuke Minami',
+    author_email='me@minyus.github.com',
+    url='https://github.com/Minyus/pyminyus',
+	description='Python utility.',
+	install_requires=[
+    ],
+	keywords='minyus',
+	zip_safe=False,
+    test_suite='tests',
+    classifiers=[
+        'Development Status :: 3 - Alpha',
         'Natural Language :: English',
         "License :: OSI Approved :: MIT License",
         'Programming Language :: Python :: 3.6',
         "Operating System :: OS Independent"
-      ])
+    ])
