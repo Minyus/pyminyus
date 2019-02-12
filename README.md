@@ -16,7 +16,7 @@ Option 2: clone this GitHub repository, cd into the downloaded repository, and r
 python setup.py install
 ```
 
-Option 3: install from PyPI
+Option 3: pip install from PyPI
 
 ```
 pip install pyminyus
