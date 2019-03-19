@@ -28,11 +28,11 @@ def print_progress(iteration, total_iterations, update_interval_sec = 1.0):
         progress_pct = 100 * progress
         t_est_total = t_elapsed / progress
         t_est_remained = t_est_total - t_elapsed
-        sys.stdout.write(f'\rProgress:{progress_pct: 5.2f} % ' \
-                         + f' | Processed:{i_: d}/{total_iterations: d} ' \
-                         + f' | Elapsed: {t_elapsed: 8.0f} sec' \
-                         + f' | Est total: {t_est_total: 8.0f} sec' \
-                         + f' | Est remained: {t_est_remained: 8.0f} sec' \
+        sys.stdout.write('\rProgress:{:5.2f} % '.format(progress_pct) \
+                         + ' | Completed :{:d}/{:d} '.format(i_, total_iterations) \
+                         + ' | Elapsed: {:6.0f} sec'.format(t_elapsed) \
+                         + ' | Est total: {:6.0f} sec'.format(t_est_total) \
+                         + ' | Est remained: {:6.0f} sec'.format(t_est_remained) \
                         )
         sys.stdout.flush()
     if i == (total_iterations - 1):
