@@ -19,7 +19,7 @@ class PrintProgress():
         t = time.time()
         self._time_started = self._time_updated = t
 
-    def print_progress(self, i_):
+    def print_progress(self, i):
         t = time.time()
         if ((t - self._time_updated) > self.update_interval_sec) or (i in [0, self.last_iteration]):
             self._time_updated = t
