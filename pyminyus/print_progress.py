@@ -30,7 +30,7 @@ class PrintProgress():
             t_est_total = t_elapsed / progress
             t_est_remained = t_est_total - t_elapsed
             print_str = \
-                 ' | Completed :{:d}/{:d} = {:5.2f} %'.format(i_, total_iterations, progress_pct) \
+                 ' | Completed :{:d}/{:d} = {:5.2f} %'.format(i_, self.total_iterations, progress_pct) \
                 + ' | Elapsed: ' + format_sec(t_elapsed) \
                 + ' | Est total: ' + format_sec(t_est_total) \
                 + ' | Est remained: ' + format_sec(t_est_remained) + '|'
