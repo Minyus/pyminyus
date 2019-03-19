@@ -33,6 +33,7 @@ def mask_boxes(img, boxes=[[0,0,100,100]]):
 if __name__=="__main__":
     boxes = [[300, 100, 400, 200],
              [140, 120, 265, 170]]
-    image_file = 'image.jpg'
-    img = Image.open(image_file)
-    pilshow(mask_boxes(img, boxes))
+    image_path = '../val/instant_coffee/instant_coffee53.jpg'
+    with Image.open(image_path) as img:
+        image_pil = img.copy()
+    pilshow(mask_boxes(image_pil, boxes))
