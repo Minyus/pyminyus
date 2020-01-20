@@ -13,9 +13,13 @@ def product_dict_list(d):
 
 
 if __name__ == "__main__":
-    params_dict = {'filters': [32, 64], 'kernel_size': [3, 4], 'activation': ['relu', 'linear']}
-    print('input:', params_dict, '\n')
+    params_dict = {
+        "filters": [32, 64],
+        "kernel_size": [3, 4],
+        "activation": ["relu", "linear"],
+    }
+    print("input:", params_dict, "\n")
     params_list = product_dict_list(params_dict)
-    print('output:')
+    print("output:")
     for p in params_list:
         print(p)
